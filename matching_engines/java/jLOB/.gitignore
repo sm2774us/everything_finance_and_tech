@@ -1,0 +1,7 @@
+src/main/java/db/jooq
+target
+gradle
+.gradle
+build
+out
+/.idea/

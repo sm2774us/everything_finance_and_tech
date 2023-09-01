@@ -1,0 +1,11 @@
+sudo: required
+language: cpp
+os : linux
+dist: trusty
+compiler: gcc
+
+script:
+    - cd build
+    - cd linux_gcc
+    - make clean
+    - make release

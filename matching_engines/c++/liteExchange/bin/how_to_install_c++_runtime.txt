@@ -1,0 +1,16 @@
+Linux
+
+	Make sure you have GNU Libstd C++ 6 runtime in your Linux distribution
+	
+	CentOS : 	First find out package name for your architecture
+	
+					yum whatprovides libstdc++.so.6
+			
+				Then yum install the package you found
+	
+	Ubuntu :	sudo apt-get install libstdc++6
+
+Windows
+
+	Go to https://support.microsoft.com/en-gb/help/2977003/the-latest-supported-visual-c-downloads
+	Download and install VS2017 x86 or x64 version

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{846b538d-b890-45d8-aed8-2a61dfdca36e}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>liteExchange</RootNamespace>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{FC1A4D80-50E9-41DA-9192-61C0DBAA00D2}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+    <RemoteRootDir>~/liteExchange</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Makefile</ConfigurationType>
+    <RemoteRootDir>~/liteExchange</RemoteRootDir>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <RemoteBuildCommandLine>whoami</RemoteBuildCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <RemoteBuildCommandLine>cd liteExchange/build &amp;&amp; cd linux_gcc &amp;&amp; make debug</RemoteBuildCommandLine>
+    <AdditionalSourcesToCopyMapping>
+    </AdditionalSourcesToCopyMapping>
+    <BuildCommandLine>
+    </BuildCommandLine>
+    <IntDir>$(ProjectDir)obj\$(Platform)\$(Configuration)\</IntDir>
+    <RemoteProjectDir>~/liteExchange</RemoteProjectDir>
+    <NMakeIncludeSearchPath>..\..\source;d:\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakePreprocessorDefinitions>..\..\source;d:\include</NMakePreprocessorDefinitions>
+    <RemoteReBuildCommandLine>cd liteExchange/build &amp;&amp; cd linux_gcc &amp;&amp; make clean &amp;&amp; make debug</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>cd liteExchange/build &amp;&amp; cd linux_gcc &amp;&amp; make clean</RemoteCleanCommandLine>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <RemoteProjectDir>~/liteExchange</RemoteProjectDir>
+    <NMakePreprocessorDefinitions>..\..\source;d:\include</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>..\..\source;d:\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <RemoteBuildCommandLine>cd liteExchange/build &amp;&amp; cd linux_gcc &amp;&amp; make release</RemoteBuildCommandLine>
+    <RemoteReBuildCommandLine>cd liteExchange/build &amp;&amp; cd linux_gcc &amp;&amp; make clean &amp;&amp; make release</RemoteReBuildCommandLine>
+    <RemoteCleanCommandLine>cd liteExchange/build &amp;&amp; cd linux_gcc &amp;&amp; make clean</RemoteCleanCommandLine>
+  </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\core\concurrency\thread.cpp" />
+    <ClCompile Include="..\..\source\core\concurrency\thread_pool.cpp" />
+    <ClCompile Include="..\..\source\core\configuration.cpp" />
+    <ClCompile Include="..\..\source\core\logger\logger.cpp" />
+    <ClCompile Include="..\..\source\core\network\io_listener_epoll.cpp" />
+    <ClCompile Include="..\..\source\core\network\io_listener_select.cpp" />
+    <ClCompile Include="..\..\source\core\network\socket.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_connection.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_server.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_server_reactor.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_server_thread_per_client.cpp" />
+    <ClCompile Include="..\..\source\core\shared_memory.cpp" />
+    <ClCompile Include="..\..\source\core\single_instance.cpp" />
+    <ClCompile Include="..\..\source\core\stopwatch.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_message.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_receive_cache.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_server_reactor.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_session.cpp" />
+    <ClCompile Include="..\..\source\main.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\central_order_book.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\order.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\order_book.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\security_manager.cpp" />
+    <ClCompile Include="..\..\source\precompiled_header.cpp" />
+    <ClCompile Include="..\..\source\server\server_fix.cpp" />
+    <ClCompile Include="..\..\source\server\server_offline.cpp" />
+    <ClCompile Include="..\..\source\server\server_outgoing_message_processor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\core\callstack.h" />
+    <ClInclude Include="..\..\source\core\compiler\alignas.h" />
+    <ClInclude Include="..\..\source\core\compiler\cpp_version_check.h" />
+    <ClInclude Include="..\..\source\core\compiler\fastcall.h" />
+    <ClInclude Include="..\..\source\core\compiler\force_inline.h" />
+    <ClInclude Include="..\..\source\core\compiler\ignored_warnings.h" />
+    <ClInclude Include="..\..\source\core\compiler\likely.h" />
+    <ClInclude Include="..\..\source\core\compiler\noexcept.h" />
+    <ClInclude Include="..\..\source\core\compiler\no_inline.h" />
+    <ClInclude Include="..\..\source\core\compiler\os_version_check.h" />
+    <ClInclude Include="..\..\source\core\compiler\preprocessor.h" />
+    <ClInclude Include="..\..\source\core\compiler\thread_local.h" />
+    <ClInclude Include="..\..\source\core\compiler\unused.h" />
+    <ClInclude Include="..\..\source\core\concurrency\actor.h" />
+    <ClInclude Include="..\..\source\core\concurrency\queue_mpsc.hpp" />
+    <ClInclude Include="..\..\source\core\concurrency\ring_buffer_spsc_lockfree.hpp" />
+    <ClInclude Include="..\..\source\core\concurrency\spinlock.hpp" />
+    <ClInclude Include="..\..\source\core\concurrency\task.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_pool.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_pool_arguments.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_priority.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_wait_strategy.h" />
+    <ClInclude Include="..\..\source\core\configuration.h" />
+    <ClInclude Include="..\..\source\core\console_utility.h" />
+    <ClInclude Include="..\..\source\core\datetime_utility.h" />
+    <ClInclude Include="..\..\source\core\design_patterns\factory.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\observer.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\pool.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\singleton_dclp.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\singleton_static.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\visitor.hpp" />
+    <ClInclude Include="..\..\source\core\environment.h" />
+    <ClInclude Include="..\..\source\core\file_utility.h" />
+    <ClInclude Include="..\..\source\core\logger\logger.h" />
+    <ClInclude Include="..\..\source\core\logger\logger_arguments.h" />
+    <ClInclude Include="..\..\source\core\logger\log_entry.hpp" />
+    <ClInclude Include="..\..\source\core\logger\log_levels.h" />
+    <ClInclude Include="..\..\source\core\logger\memory_mapped_file_backend.hpp" />
+    <ClInclude Include="..\..\source\core\memory\cpu_memory.h" />
+    <ClInclude Include="..\..\source\core\memory\heap_memory_cache_aligned_allocators.hpp" />
+    <ClInclude Include="..\..\source\core\memory\make_unique.hpp" />
+    <ClInclude Include="..\..\source\core\memory\stack_memory.h" />
+    <ClInclude Include="..\..\source\core\memory\virtual_memory.h" />
+    <ClInclude Include="..\..\source\core\network\address.h" />
+    <ClInclude Include="..\..\source\core\network\io_listener_epoll.h" />
+    <ClInclude Include="..\..\source\core\network\io_listener_select.h" />
+    <ClInclude Include="..\..\source\core\network\socket.h" />
+    <ClInclude Include="..\..\source\core\network\socket_library.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_connection.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_server.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_server_reactor.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_server_thread_per_client.h" />
+    <ClInclude Include="..\..\source\core\noncopyable.h" />
+    <ClInclude Include="..\..\source\core\pretty_exception.h" />
+    <ClInclude Include="..\..\source\core\self_process.h" />
+    <ClInclude Include="..\..\source\core\shared_memory.h" />
+    <ClInclude Include="..\..\source\core\single_instance.h" />
+    <ClInclude Include="..\..\source\core\stopwatch.h" />
+    <ClInclude Include="..\..\source\core\string_utility.h" />
+    <ClInclude Include="..\..\source\core\trace.h" />
+    <ClInclude Include="..\..\source\fix\fix_constants.h" />
+    <ClInclude Include="..\..\source\fix\fix_message.h" />
+    <ClInclude Include="..\..\source\fix\fix_parser.h" />
+    <ClInclude Include="..\..\source\fix\fix_receive_cache.h" />
+    <ClInclude Include="..\..\source\fix\fix_sequence_store.h" />
+    <ClInclude Include="..\..\source\fix\fix_server_configuration.h" />
+    <ClInclude Include="..\..\source\fix\fix_server_reactor.h" />
+    <ClInclude Include="..\..\source\fix\fix_session.h" />
+    <ClInclude Include="..\..\source\order_matcher\base_message.h" />
+    <ClInclude Include="..\..\source\order_matcher\central_order_book.h" />
+    <ClInclude Include="..\..\source\order_matcher\central_order_book_visitor.h" />
+    <ClInclude Include="..\..\source\order_matcher\incoming_message.h" />
+    <ClInclude Include="..\..\source\order_matcher\order.h" />
+    <ClInclude Include="..\..\source\order_matcher\order_book.h" />
+    <ClInclude Include="..\..\source\order_matcher\outgoing_message.h" />
+    <ClInclude Include="..\..\source\order_matcher\security_manager.h" />
+    <ClInclude Include="..\..\source\precompiled_header.h" />
+    <ClInclude Include="..\..\source\server\command_line_interface.h" />
+    <ClInclude Include="..\..\source\server\fix_message_converter.h" />
+    <ClInclude Include="..\..\source\server\server_base.h" />
+    <ClInclude Include="..\..\source\server\server_configuration.h" />
+    <ClInclude Include="..\..\source\server\server_constants.h" />
+    <ClInclude Include="..\..\source\server\server_error.h" />
+    <ClInclude Include="..\..\source\server\server_fix.h" />
+    <ClInclude Include="..\..\source\server\server_offline.h" />
+    <ClInclude Include="..\..\source\server\server_outgoing_message_processor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\bin\liteExchange.ini" />
+    <None Include="..\linux_gcc\Makefile" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <BuildLog>
+      <Path>$(IntDir)$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

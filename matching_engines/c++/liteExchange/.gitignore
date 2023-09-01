@@ -1,0 +1,28 @@
+##########################
+# GCC SPECIFIC
+*.o
+##########################
+# MSVC SPECIFIC
+*.sdf
+*.ipch
+*.ilk
+*.pdb
+*.obj
+*.idb
+*.tlog
+*.exp
+*.ncb
+*.suo
+*.iobj
+*.ipdb
+*.db*
+*.log
+*.user
+ipch/
+intermediate/
+##########################
+# PYTHON SPECIFIC ( TEST HARNESS )
+*.pyc
+##########################
+# PROJECT SPECIFIC
+ome_log.txt

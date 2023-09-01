@@ -1,0 +1,13 @@
+[requires]
+gtest/1.10.0
+benchmark/1.5.0
+boost/1.72.0
+spdlog/1.5.0
+nlohmann_json/3.7.3
+jemalloc/5.2.1
+tbb/2020.0
+concurrentqueue/1.0.1
+
+[generators]
+txt
+cmake

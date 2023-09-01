@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="order_matcher">
+      <UniqueIdentifier>{058c8716-bca9-4e48-877f-a656fa9fddf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="server">
+      <UniqueIdentifier>{62ea120b-e105-4d83-a731-88417c70fcec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{dce9f842-8372-471f-b368-c48fa25fb85a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\logger">
+      <UniqueIdentifier>{507ed549-0964-46a7-aeec-7def67431234}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\design_patterns">
+      <UniqueIdentifier>{18b8a0c7-f1d1-4e94-ae91-b1da81cff11e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\compiler">
+      <UniqueIdentifier>{ccefa686-4571-47a9-b73c-ed5e21ade1ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\memory">
+      <UniqueIdentifier>{1e8f2e81-370f-49de-a4a4-771ed19819da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\concurrency">
+      <UniqueIdentifier>{09befdce-9098-4869-b853-4fa003799909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fix">
+      <UniqueIdentifier>{a4df6701-15f6-4558-9fb6-e48c6bfa7cb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\network">
+      <UniqueIdentifier>{5df005b5-1797-4439-b7f5-10789b0daa40}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\core\compiler\alignas.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\cpp_version_check.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\fastcall.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\force_inline.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\ignored_warnings.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\likely.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\no_inline.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\noexcept.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\os_version_check.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\preprocessor.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\thread_local.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\compiler\unused.h">
+      <Filter>core\compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\actor.h">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\queue_mpsc.hpp">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\ring_buffer_spsc_lockfree.hpp">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\spinlock.hpp">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\task.h">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\thread.h">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\thread_pool.h">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\thread_pool_arguments.h">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\thread_priority.h">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\concurrency\thread_wait_strategy.h">
+      <Filter>core\concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\design_patterns\factory.hpp">
+      <Filter>core\design_patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\design_patterns\observer.hpp">
+      <Filter>core\design_patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\design_patterns\pool.hpp">
+      <Filter>core\design_patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\design_patterns\singleton_dclp.hpp">
+      <Filter>core\design_patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\design_patterns\singleton_static.hpp">
+      <Filter>core\design_patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\design_patterns\visitor.hpp">
+      <Filter>core\design_patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\logger\log_entry.hpp">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\logger\log_levels.h">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\logger\logger.h">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\logger\logger_arguments.h">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\logger\memory_mapped_file_backend.hpp">
+      <Filter>core\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\memory\cpu_memory.h">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\memory\heap_memory_cache_aligned_allocators.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\memory\make_unique.hpp">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\memory\stack_memory.h">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\memory\virtual_memory.h">
+      <Filter>core\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\address.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\io_listener_select.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\socket.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\socket_library.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\tcp_connection.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\tcp_server.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\tcp_server_reactor.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\network\tcp_server_thread_per_client.h">
+      <Filter>core\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\callstack.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\configuration.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\console_utility.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\datetime_utility.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\environment.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\file_utility.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\noncopyable.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\pretty_exception.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\self_process.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\shared_memory.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\single_instance.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\stopwatch.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\string_utility.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\core\trace.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_constants.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_message.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_parser.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_receive_cache.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_sequence_store.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_server_configuration.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_server_reactor.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\fix\fix_session.h">
+      <Filter>fix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\base_message.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\central_order_book.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\central_order_book_visitor.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\incoming_message.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\order.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\order_book.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\outgoing_message.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\order_matcher\security_manager.h">
+      <Filter>order_matcher</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\command_line_interface.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\fix_message_converter.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\server_base.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\server_configuration.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\server_constants.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\server_error.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\server_fix.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\server_offline.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\server\server_outgoing_message_processor.h">
+      <Filter>server</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\source\precompiled_header.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\core\concurrency\thread.cpp">
+      <Filter>core\concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\concurrency\thread_pool.cpp">
+      <Filter>core\concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\logger\logger.cpp">
+      <Filter>core\logger</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\network\io_listener_select.cpp">
+      <Filter>core\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\network\socket.cpp">
+      <Filter>core\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\network\tcp_connection.cpp">
+      <Filter>core\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\network\tcp_server.cpp">
+      <Filter>core\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\network\tcp_server_reactor.cpp">
+      <Filter>core\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\network\tcp_server_thread_per_client.cpp">
+      <Filter>core\network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\configuration.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\shared_memory.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\single_instance.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\core\stopwatch.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\fix\fix_message.cpp">
+      <Filter>fix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\fix\fix_receive_cache.cpp">
+      <Filter>fix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\fix\fix_server_reactor.cpp">
+      <Filter>fix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\fix\fix_session.cpp">
+      <Filter>fix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\order_matcher\central_order_book.cpp">
+      <Filter>order_matcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\order_matcher\order.cpp">
+      <Filter>order_matcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\order_matcher\order_book.cpp">
+      <Filter>order_matcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\order_matcher\security_manager.cpp">
+      <Filter>order_matcher</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\server\server_fix.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\server\server_offline.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\server\server_outgoing_message_processor.cpp">
+      <Filter>server</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\main.cpp" />
+    <ClCompile Include="..\..\source\precompiled_header.cpp" />
+  </ItemGroup>
+</Project>

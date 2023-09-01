@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\source\core\callstack.h" />
+    <ClInclude Include="..\..\source\core\compiler\alignas.h" />
+    <ClInclude Include="..\..\source\core\compiler\cpp_version_check.h" />
+    <ClInclude Include="..\..\source\core\compiler\fastcall.h" />
+    <ClInclude Include="..\..\source\core\compiler\force_inline.h" />
+    <ClInclude Include="..\..\source\core\compiler\ignored_warnings.h" />
+    <ClInclude Include="..\..\source\core\compiler\likely.h" />
+    <ClInclude Include="..\..\source\core\compiler\noexcept.h" />
+    <ClInclude Include="..\..\source\core\compiler\no_inline.h" />
+    <ClInclude Include="..\..\source\core\compiler\os_version_check.h" />
+    <ClInclude Include="..\..\source\core\compiler\preprocessor.h" />
+    <ClInclude Include="..\..\source\core\compiler\thread_local.h" />
+    <ClInclude Include="..\..\source\core\compiler\unused.h" />
+    <ClInclude Include="..\..\source\core\concurrency\actor.h" />
+    <ClInclude Include="..\..\source\core\concurrency\queue_mpsc.hpp" />
+    <ClInclude Include="..\..\source\core\concurrency\ring_buffer_spsc_lockfree.hpp" />
+    <ClInclude Include="..\..\source\core\concurrency\spinlock.hpp" />
+    <ClInclude Include="..\..\source\core\concurrency\task.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_pool.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_pool_arguments.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_priority.h" />
+    <ClInclude Include="..\..\source\core\concurrency\thread_wait_strategy.h" />
+    <ClInclude Include="..\..\source\core\configuration.h" />
+    <ClInclude Include="..\..\source\core\console_utility.h" />
+    <ClInclude Include="..\..\source\core\datetime_utility.h" />
+    <ClInclude Include="..\..\source\core\design_patterns\factory.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\observer.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\pool.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\singleton_dclp.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\singleton_static.hpp" />
+    <ClInclude Include="..\..\source\core\design_patterns\visitor.hpp" />
+    <ClInclude Include="..\..\source\core\environment.h" />
+    <ClInclude Include="..\..\source\core\file_utility.h" />
+    <ClInclude Include="..\..\source\core\logger\logger.h" />
+    <ClInclude Include="..\..\source\core\logger\logger_arguments.h" />
+    <ClInclude Include="..\..\source\core\logger\log_entry.hpp" />
+    <ClInclude Include="..\..\source\core\logger\log_levels.h" />
+    <ClInclude Include="..\..\source\core\logger\memory_mapped_file_backend.hpp" />
+    <ClInclude Include="..\..\source\core\memory\cpu_memory.h" />
+    <ClInclude Include="..\..\source\core\memory\heap_memory_cache_aligned_allocators.hpp" />
+    <ClInclude Include="..\..\source\core\memory\make_unique.hpp" />
+    <ClInclude Include="..\..\source\core\memory\stack_memory.h" />
+    <ClInclude Include="..\..\source\core\memory\virtual_memory.h" />
+    <ClInclude Include="..\..\source\core\network\address.h" />
+    <ClInclude Include="..\..\source\core\network\io_listener_select.h" />
+    <ClInclude Include="..\..\source\core\network\socket.h" />
+    <ClInclude Include="..\..\source\core\network\socket_library.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_connection.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_server.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_server_reactor.h" />
+    <ClInclude Include="..\..\source\core\network\tcp_server_thread_per_client.h" />
+    <ClInclude Include="..\..\source\core\noncopyable.h" />
+    <ClInclude Include="..\..\source\core\pretty_exception.h" />
+    <ClInclude Include="..\..\source\core\self_process.h" />
+    <ClInclude Include="..\..\source\core\shared_memory.h" />
+    <ClInclude Include="..\..\source\core\single_instance.h" />
+    <ClInclude Include="..\..\source\core\stopwatch.h" />
+    <ClInclude Include="..\..\source\core\string_utility.h" />
+    <ClInclude Include="..\..\source\core\trace.h" />
+    <ClInclude Include="..\..\source\fix\fix_constants.h" />
+    <ClInclude Include="..\..\source\fix\fix_message.h" />
+    <ClInclude Include="..\..\source\fix\fix_parser.h" />
+    <ClInclude Include="..\..\source\fix\fix_receive_cache.h" />
+    <ClInclude Include="..\..\source\fix\fix_sequence_store.h" />
+    <ClInclude Include="..\..\source\fix\fix_server_configuration.h" />
+    <ClInclude Include="..\..\source\fix\fix_server_reactor.h" />
+    <ClInclude Include="..\..\source\fix\fix_session.h" />
+    <ClInclude Include="..\..\source\order_matcher\base_message.h" />
+    <ClInclude Include="..\..\source\order_matcher\central_order_book.h" />
+    <ClInclude Include="..\..\source\order_matcher\central_order_book_visitor.h" />
+    <ClInclude Include="..\..\source\order_matcher\incoming_message.h" />
+    <ClInclude Include="..\..\source\order_matcher\order.h" />
+    <ClInclude Include="..\..\source\order_matcher\order_book.h" />
+    <ClInclude Include="..\..\source\order_matcher\outgoing_message.h" />
+    <ClInclude Include="..\..\source\order_matcher\security_manager.h" />
+    <ClInclude Include="..\..\source\precompiled_header.h" />
+    <ClInclude Include="..\..\source\server\command_line_interface.h" />
+    <ClInclude Include="..\..\source\server\fix_message_converter.h" />
+    <ClInclude Include="..\..\source\server\server_base.h" />
+    <ClInclude Include="..\..\source\server\server_configuration.h" />
+    <ClInclude Include="..\..\source\server\server_constants.h" />
+    <ClInclude Include="..\..\source\server\server_error.h" />
+    <ClInclude Include="..\..\source\server\server_fix.h" />
+    <ClInclude Include="..\..\source\server\server_offline.h" />
+    <ClInclude Include="..\..\source\server\server_outgoing_message_processor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\core\concurrency\thread.cpp" />
+    <ClCompile Include="..\..\source\core\concurrency\thread_pool.cpp" />
+    <ClCompile Include="..\..\source\core\configuration.cpp" />
+    <ClCompile Include="..\..\source\core\logger\logger.cpp" />
+    <ClCompile Include="..\..\source\core\network\io_listener_select.cpp" />
+    <ClCompile Include="..\..\source\core\network\socket.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_connection.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_server.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_server_reactor.cpp" />
+    <ClCompile Include="..\..\source\core\network\tcp_server_thread_per_client.cpp" />
+    <ClCompile Include="..\..\source\core\shared_memory.cpp" />
+    <ClCompile Include="..\..\source\core\single_instance.cpp" />
+    <ClCompile Include="..\..\source\core\stopwatch.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_message.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_receive_cache.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_server_reactor.cpp" />
+    <ClCompile Include="..\..\source\fix\fix_session.cpp" />
+    <ClCompile Include="..\..\source\main.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\central_order_book.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\order.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\order_book.cpp" />
+    <ClCompile Include="..\..\source\order_matcher\security_manager.cpp" />
+    <ClCompile Include="..\..\source\precompiled_header.cpp" />
+    <ClCompile Include="..\..\source\server\server_fix.cpp" />
+    <ClCompile Include="..\..\source\server\server_offline.cpp" />
+    <ClCompile Include="..\..\source\server\server_outgoing_message_processor.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{2816D29E-D699-4F21-87C2-EAD81773A5CF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ome</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>liteExchange</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../bin/</OutDir>
+    <IntDir>../../bin/intermediate/</IntDir>
+    <IncludePath>$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../bin/</OutDir>
+    <IntDir>../../bin/intermediate/</IntDir>
+    <IncludePath>$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../../bin/</OutDir>
+    <IntDir>../../bin/intermediate/</IntDir>
+    <IncludePath>$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../../bin/</OutDir>
+    <IntDir>../../bin/intermediate/</IntDir>
+    <IncludePath>$(IncludePath);$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\source\;..\..\dependencies\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>precompiled_header.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precompiled_header.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\source\;..\..\dependencies\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>precompiled_header.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precompiled_header.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\source\;..\..\dependencies\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>precompiled_header.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precompiled_header.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalIncludeDirectories>..\..\source\;..\..\dependencies\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeaderFile>precompiled_header.h</PrecompiledHeaderFile>
+      <ForcedIncludeFiles>precompiled_header.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
