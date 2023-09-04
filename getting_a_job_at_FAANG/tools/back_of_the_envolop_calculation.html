@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Bootstrap CSS -->
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" rel="stylesheet">
+
+    <title>Size Estimates</title>
+</head>
+
+<body>
+
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="#">Size Estimates</a>
+</nav>
+
+<div class="card-group">
+    <div class="card text-dark bg-light mb-3">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Calls per day:</span>
+                    <input aria-describedby="basic-addon3" class="form-control" id="calls-per-day"
+                           placeholder="Ex: 1m, 1b, 50k"
+                           type="text">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Size Per Object:</span>
+                    <input aria-describedby="basic-addon3" class="form-control" id="size-per-object"
+                           placeholder="In KB. Ex: 10 for 10kb. 1000"
+                           type="text">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Latency:</span>
+                    <input aria-describedby="basic-addon3" class="form-control" id="latency"
+                           placeholder="In milli seconds."
+                           type="text">
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="card text-dark bg-light mb-3">
+        <div class="card-body">
+            <img class="img-fluid rounded mx-auto d-block"
+                 src="https://www.dnsstuff.com/wp-content/uploads/2020/12/image-11.png">
+            <img class="img-fluid rounded mx-auto d-block"
+                 src="https://miro.medium.com/max/700/1*5S80KcgolUfNWIha_2fI9w.png">
+            <img class="img-fluid rounded mx-auto d-block"
+                 src="https://miro.medium.com/max/700/1*d5xp3raYfHbcsYdsW-u0sw.png">
+        </div>
+    </div>
+    <div class="card text-white bg-success mb-3">
+        <div class="card-body">
+            <p class="fst-italic">Request per Second:
+                <input class="fst-italic" disabled id="rps" type="text"/>
+            </p>
+            <!--            <p class="fst-italic">Total Cores:-->
+            <!--                <input class="fst-italic" disabled id="cores" type="text"/>-->
+            <!--            </p>-->
+            <!--            <p class="fst-italic">Total RAM:-->
+            <!--                <input class="fst-italic" disabled id="ram" type="text"/>-->
+            <!--            </p>-->
+            <p class="fst-italic">Bandwidth:
+                <input class="fst-italic" disabled id="bandwidth" type="text"> Mbps</input>
+            </p>
+            <p class="fst-italic">Storage per day:
+                <input class="fst-italic" disabled id="per-day" type="text"/>
+            </p>
+            <p class="fst-italic">Storage per year:
+                <input class="fst-italic" disabled id="per-year" type="text"/>
+            </p>
+            <p class="fst-italic">Storage for 5 years:
+                <input class="fst-italic" disabled id="per-5-year" type="text"/>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+<script crossorigin="anonymous"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+        $("#calls-per-day").on('input', function (e) {
+            var calls_per_day = get_calls_perDay();
+            console.log("calls_per_day is : " + calls_per_day);
+            var rps = get_rps(calls_per_day);
+            set_rps(rps);
+        });
+
+        $("#size-per-object").on('input', function (e) {
+            var size = get_size_per_object();
+            console.log("Size Per entity is : " + size);
+            var calls_per_day = get_calls_perDay();
+            var rps = get_rps(calls_per_day)
+            var bandwidth = get_bandwidth(rps, size);
+            set_bandwidth(bandwidth);
+            set_rps(rps);
+            set_storage_per_day(get_storage_in_years(calls_per_day, size, 1 / 365));
+            set_storage_per_year(get_storage_in_years(calls_per_day, size, 1));
+            set_storage_for_5_year(get_storage_in_years(calls_per_day, size, 5));
+        });
+
+<!--        $("#latency").on('input', function (e) {-->
+<!--            var latency = get_latency_in_seconds();-->
+<!--            var size = get_size_per_object();-->
+<!--            var rps = get_rps(get_calls_perDay())-->
+<!--            var cores = getCores(latency , rps);-->
+<!--            set_cores(cores);-->
+<!--            var ram = getRam(rps, latency, size);-->
+<!--            set_ram(ram);-->
+<!--        });-->
+
+        function getRam(rps, latency, size){
+            var ram = rps * latency * size;
+            console.log("Calculated RAM:  " + ram);
+            return ram;
+        }
+        function getCores(latency , rps){
+            var cores = rps * latency;
+            console.log("Calculated Cores:  " + cores);
+            return cores;
+        }
+
+        function get_latency_in_seconds() {
+            var latency = $('#latency').val();
+            console.log("Latency in Milli Seconds " + latency);
+            return latency / 1000;
+        }
+
+        function get_calls_perDay() {
+            var str = $('#calls-per-day').val();
+            var val = unhumanize_number(str);
+            console.log("Converted " + str + " to " + val + ".");
+            return val;
+        }
+
+        function get_size_per_object(){
+            var str = $('#size-per-object').val();
+            var val = unhumanize_memory(str);
+            console.log("Converted " + str + " to " + val + ".");
+            return val;
+        }
+
+        function get_storage_in_years(calls_per_day, size, years) {
+            var total = calls_per_day * size * 365 * years;
+            console.log("Memory for " + years + " years is : " + total);
+            return total;
+        }
+
+        function get_bandwidth(rps, size) {
+            var bandwidth = rps * size * 8 * (1 / 1000000);
+            console.log("Calculated Bandwidth:  " + bandwidth);
+            return bandwidth;
+        };
+
+        function get_rps(calls_per_day) {
+            var rps = (calls_per_day) / (24 * 60 * 60)
+            console.log("Calculated RPS = " + rps + " for Calls/day = " + calls_per_day);
+            return rps;
+        };
+
+        function set_rps(rps) {
+            console.log("Setting up RPS:  " + rps);
+            $("#rps").val(rps);
+        };
+
+        function set_cores(cores) {
+            console.log("Setting up cores:  " + cores);
+            $("#cores").val(cores);
+        };
+
+        function set_ram(ram) {
+            var readable = bytesToSize(ram)
+            console.log("Setting up ram:  " + ram + " to readable: " + readable);
+            $("#ram").val(readable);
+        };
+
+        function set_bandwidth(bandwidth) {
+            console.log("Setting up Bandwidth:  " + bandwidth);
+            $("#bandwidth").val(bandwidth);
+        };
+
+        function set_storage_per_day(size) {
+            var readable = bytesToSize(size);
+            console.log("Setting 1 Years Storage to " + readable);
+            $("#per-day").val(readable);
+        };
+
+        function set_storage_per_year(size) {
+            var readable = bytesToSize(size);
+            console.log("Setting 1 Years Storage to " + readable);
+            $("#per-year").val(readable);
+        };
+
+        function set_storage_for_5_year(size) {
+            var readable = bytesToSize(size);
+            console.log("Setting 5 Years Storage to " + readable);
+            $("#per-5-year").val(readable);
+        };
+
+        function bytesToSize(bytes) {
+            var sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PetByte', 'Exabyte'];
+            if (bytes == 0) return '0 Byte';
+            var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
+            return Math.round(bytes / Math.pow(1024, i), 2) + ' ' + sizes[i];
+        }
+
+        function unhumanize_number(val) {
+            multiplier = val.substr(-1).toLowerCase();
+            if (multiplier == "k" || multiplier == "K")
+                return parseFloat(val) * 1000;
+            else if (multiplier == "m" || multiplier == "M")
+                return parseFloat(val) * 1000000;
+            else if (multiplier == "b" || multiplier == "B")
+                return parseFloat(val) * 1000000;
+        }
+
+        function unhumanize_memory(text) {
+            var powers = { 'k': 1, 'm': 2, 'g': 3, 't': 4 };
+            var regex = /(\d+(?:\.\d+)?)\s?(k|m|g|t)?b?/i;
+            var res = regex.exec(text);
+            return res[1] * Math.pow(1024, powers[res[2].toLowerCase()]);
+        }
+
+
+
+</script>
+
+</body>
+
+</html>
