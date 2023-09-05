@@ -15,8 +15,8 @@ __## Computer Science fundementals__
 * big-o notaion (must know or you will fail)
 big-o-notation =  A theoretical measure of the execution of an algorithm, usually the time or memory needed, given the problem size n, which is usually the number of items. Informally, saying some equation f(n) = O(g(n)) means it is less than some constant multiple of g(n).
 
-![Table](/../master/images/bigo.png?raw=true "Algorithum table")
-![Graph](/../master/images/bigograph.png??raw=true "Graph")
+![Table](./images/bigo.png?raw=true "Algorithum table")
+![Graph](./images/bigograph.png??raw=true "Graph")
 
 * https://www.topcoder.com/blog/big-o-notation-primer/  
 
@@ -34,10 +34,10 @@ O(N^2) = O(N^2) represents an algorithm that is directly proportional to the squ
 
 O(N log N) = represents an algorithm that will in increase in execution time proportionate to the number of the input times the logarithm of the number of the input. Mergesort and quicksort are good examples of this algorithm.
 
-![Big-O Complexity Chart](/../master/images/bigocomplexitychart.png?raw=true "Big-O Complexity Chart")
-![Common Data Structure Operations](/../master/images/commonDataStructureOperations.png??raw=true "Common Data Structure Operations")
-![Array Sorting Algorithms](/../master/images/arraySortingAlgos.png?raw=true "Array Sorting Algorithms")
-![Big-O-Cheatsheet](/../master/images/big-o-cheat-sheet-poster.png?raw=true "Big-o-cheatsheet")
+![Big-O Complexity Chart](./images/bigocomplexitychart.png?raw=true "Big-O Complexity Chart")
+![Common Data Structure Operations](./images/commonDataStructureOperations.png??raw=true "Common Data Structure Operations")
+![Array Sorting Algorithms](./images/arraySortingAlgos.png?raw=true "Array Sorting Algorithms")
+![Big-O-Cheatsheet](./images/big-o-cheat-sheet-poster.png?raw=true "Big-o-cheatsheet")
 
 The Telephone Book
 
@@ -322,7 +322,7 @@ the partition phase
 the sort phase
 Most of the work is done in the partition phase - it works out where to divide the work. The sort phase simply sorts the two smaller problems that are generated in the partition phase.
 
-![Quick Sort](/../master/images/quicksort.png?raw=true "Quick sort ex")
+![Quick Sort](./images/quicksort.png?raw=true "Quick sort ex")
 
 This makes Quicksort a good example of the divide and conquer strategy for solving problems. This is similar in principle to the binary search. In the quicksort, we divide the array of items to be sorted into two partitions and then call the quicksort procedure recursively to sort the two partitions, ie we divide the problem into two smaller ones and conquer by solving the smaller ones.
 
@@ -369,8 +369,8 @@ https://www.youtube.com/watch?v=GCae1WNvnZM
 
 Merge sort first divides the array into equal halves and then combines them in a sorted manner.
 
-![Merge Sort](/../master/images/mergesort1.png?raw=true "Merge sort ex")
-![Merge Sort](/../master/images/mergesort2.png?raw=true "Merge sort continued ex")
+![Merge Sort](./images/mergesort1.png?raw=true "Merge sort ex")
+![Merge Sort](./images/mergesort2.png?raw=true "Merge sort continued ex")
 
 Merge sort keeps on dividing the list into equal halves until it can no more be divided. By definition, if it is only one element in the list, it is sorted. Then, merge sort combines the smaller sorted lists keeping the new list sorted too.
 
@@ -467,11 +467,10 @@ Timsort is a hybrid algorithm combining merge and insertion sorts. It was invent
 
 Timsort begins by looking for small runs (called miniruns) of data that is already sorted (either small to large or vice versa). If no runs of a long-enough length (minirun is short for “minimum run”) are found then an insertion step takes place to create them. These miniruns are sorted using an insertion sort as explained above, and then combined with each other using Mergesort, again as explained above. The trick of Timsort is how it selects and creates miniruns,
 
-![Tim Sort](/../master/images/timsort1.png?raw=true "Tim sort info")
+![Tim Sort](./images/timsort1.png?raw=true "Tim sort info")
 
-![Tim Sort ...](/../master/images/timsort2.png?raw=true "Tim sort continued")
+![Tim Sort ...](./images/timsort2.png?raw=true "Tim sort continued")
 
-"""
 |-----------------------------------------------------------|
 |                         Tim Sort                          |
 |-----------------------------------------------------------|
@@ -481,7 +480,6 @@ Timsort begins by looking for small runs (called miniruns) of data that is alrea
 |Average case performance    ||  O(n log n)                 |
 |Worst case space complexity ||  O(n)                       |
 |-----------------------------------------------------------|
-"""
 
 ```python 
 def tim_sort(array): 
@@ -507,13 +505,13 @@ List weill be sdorted out in increasing order from root to leaf
 After reolacing the top element Creatuion of the Heap takes place 
 In each stepo size of Heap decreased
 
-![Heap Sort](/../master/images/heapsort0.png?raw=true "heap sort ex")
-![Heap Sort](/../master/images/heapsort1.png?raw=true "heap sort continued")
-![Heap Sort](/../master/images/heapsort2.png?raw=true "heap sort continued")
-![Heap Sort](/../master/images/heapsort3.png?raw=true "heap sort continued")
-![Heap Sort](/../master/images/heapsort4.png?raw=true "heap sort continued")
-![Heap Sort](/../master/images/heapsort5.png?raw=true "heap sort continued")
-![Heap Sort](/../master/images/heapsort6.png?raw=true "heap sort continued")
+![Heap Sort](./images/heapsort0.png?raw=true "heap sort ex")
+![Heap Sort](./images/heapsort1.png?raw=true "heap sort continued")
+![Heap Sort](./images/heapsort2.png?raw=true "heap sort continued")
+![Heap Sort](./images/heapsort3.png?raw=true "heap sort continued")
+![Heap Sort](./images/heapsort4.png?raw=true "heap sort continued")
+![Heap Sort](./images/heapsort5.png?raw=true "heap sort continued")
+![Heap Sort](./images/heapsort6.png?raw=true "heap sort continued")
 
 https://www.youtube.com/watch?v=onlhnHpGgC4
 
@@ -593,7 +591,7 @@ def swap( A, x, y ):
 
 https://www.youtube.com/watch?v=P00xJgWzz2c
 
-![Bubble Sort](/../master/images/bubblesort.png?raw=true "Bubble sort ex")
+![Bubble Sort](./images/bubblesort.png?raw=true "Bubble sort ex")
 
 ```python 
 def bubble_sort(items):
@@ -608,19 +606,19 @@ def bubble_sort(items):
 #### insertion sort:
 The insertion sort uses the principle of a marker moving along a list with a sorted side to the left side of the marker and the unsorted side to the right of the marker.
 
-![Insertion sort](/../master/images/insertionsort.png?raw=true "Insertion sort ex")
+![Insertion sort](./images/insertionsort.png?raw=true "Insertion sort ex")
 
 http://courses.cs.vt.edu/csonline/Algorithms/Lessons/InsertionCardSort/insertioncardsort.html
 https://www.youtube.com/watch?v=Nkw6Jg_Gi4w
 
 
 ex. 
-![Insertion sort](/../master/images/insertionsort1.png?raw=true "Insertion sort ex")
-![Insertion sort](/../master/images/insertionsort2.png?raw=true "Insertion sort ex")
-![Insertion sort](/../master/images/insertionsort3.png?raw=true "Insertion sort ex")
-![Insertion sort](/../master/images/insertionsort4.png?raw=true "Insertion sort ex")
-![Insertion sort](/../master/images/insertionsort5.png?raw=true "Insertion sort ex")
-![Insertion sort](/../master/images/insertionsort6.png?raw=true "Insertion sort ex")
+![Insertion sort](./images/insertionsort1.png?raw=true "Insertion sort ex")
+![Insertion sort](./images/insertionsort2.png?raw=true "Insertion sort ex")
+![Insertion sort](./images/insertionsort3.png?raw=true "Insertion sort ex")
+![Insertion sort](./images/insertionsort4.png?raw=true "Insertion sort ex")
+![Insertion sort](./images/insertionsort5.png?raw=true "Insertion sort ex")
+![Insertion sort](./images/insertionsort6.png?raw=true "Insertion sort ex")
 
 ```python 
 def insertionSort(alist):
@@ -644,7 +642,7 @@ print(alist)
 The selection sort improves on the bubble sort by making only one exchange for every pass through the list. In order to do this, a selection sort looks for the largest value as it makes a pass and, after completing the pass, places it in the proper location. As with a bubble sort, after the first pass, the largest item is in the correct place. After the second pass, the next largest is in place. This process continues and requires n−1n−1 passes to sort n items, since the final item must be in place after the (n−1)(n−1) st pass.
 
 
-![Selection Sort](/../master/images/selectionsort.png?raw=true "Selection sort ex")
+![Selection Sort](./images/selectionsort.png?raw=true "Selection sort ex")
 
 https://www.youtube.com/watch?v=6nDMgr0-Yyo
 
@@ -668,10 +666,10 @@ print(alist)
 #### tree sort:
 Tree sort is a sorting algorithm that is based on Binary Search Tree data structure. It first creates a binary search tree from the elements of the input list or array and then performs an in-order traversal on the created binary search tree to get the elements in sorted order.
 
-![Tree Sort](/../master/images/treesort0.png?raw=true "tree sort ex")
-![Tree Sort...](/../master/images/treesort1.png?raw=true "tree sort continued")
-![Tree Sort...](/../master/images/treesort2.png?raw=true "tree sort continued")
-![Tree Sort...](/../master/images/treesort3.png?raw=true "tree sort continued")
+![Tree Sort](./images/treesort0.png?raw=true "tree sort ex")
+![Tree Sort...](./images/treesort1.png?raw=true "tree sort continued")
+![Tree Sort...](./images/treesort2.png?raw=true "tree sort continued")
+![Tree Sort...](./images/treesort3.png?raw=true "tree sort continued")
 
 https://www.youtube.com/watch?v=pYT9F8_LFTM
 
@@ -783,7 +781,7 @@ tree.postorder(tree.root)
 """
 
 
-![Shell Sort](/../master/images/shellsort.png?raw=true "shell sort ex")
+![Shell Sort](./images/shellsort.png?raw=true "shell sort ex")
 https://www.youtube.com/watch?v=M9YCh-ZeC7Y
 
 ```python
@@ -804,8 +802,8 @@ def shell_sort(array):
 #### bucket sort:
 Bucket sort can be exceptionally fast because of the way elements are assigned to buckets, typically using an array where the index is the value. This means that more auxiliary memory is required for the buckets at the cost of running time than more comparison sorts. It runs in O(n+k)O(n+k) time in the average case where nn is the number of elements to be sorted and kk is the number of buckets.
 
-![Bucket Sort](/../master/images/bucketsort.png?raw=true "bucket sort ex")
-![Bucket Sort Complexity](/../master/images/bucketsortcomplexity.png?raw=true "bucket sort complexity")
+![Bucket Sort](./images/bucketsort.png?raw=true "bucket sort ex")
+![Bucket Sort Complexity](./images/bucketsortcomplexity.png?raw=true "bucket sort complexity")
 
 when its fast:
 Bucket sort’s best case occurs when the data being sorted can be distributed between the buckets perfectly. If the values are sparsely allocated over the possible value range, a larger bucket size is better since the buckets will likely be more evenly distributed. An example of this is [2303, 33, 1044], if buckets can only contain 5 different values then for this example 461 buckets would need to be initialised. A bucket size of 200-1000 would be much more reasonable.
@@ -857,19 +855,19 @@ The algorithm is named radix sort as it specifies the radix rr to be used which 
 
 https://www.youtube.com/watch?v=YXFI4osELGU
 
-![Radix Sort](/../master/images/radixsort1.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort2.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort3.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort4.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort5.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort6.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort7.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort8.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort9.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort10.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort11.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort12.png?raw=true "radix sort ex")
-![Radix Sort](/../master/images/radixsort13.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort1.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort2.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort3.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort4.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort5.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort6.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort7.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort8.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort9.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort10.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort11.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort12.png?raw=true "radix sort ex")
+![Radix Sort](./images/radixsort13.png?raw=true "radix sort ex")
 
 fast: 
 Since comparison sorts cannot perform better than O(n\log n)O(nlogn), LSD radix sort is considered one of the best alternatives provided the word size ww is expected to be less than \log nlogn.
@@ -941,18 +939,18 @@ Counting sort can be extended to work for negative inputs also.
 	
 https://www.youtube.com/watch?v=7zuGmKfUt7s
 	
-![Counting Sort](/../master/images/countingsort1.png?raw=true "counting sort ex")	
-![Counting Sort](/../master/images/countingsort2.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort3.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort4.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort5.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort6.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort7.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort8.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort9.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort10.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort11.png?raw=true "counting sort ex")
-![Counting Sort](/../master/images/countingsort12.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort1.png?raw=true "counting sort ex")	
+![Counting Sort](./images/countingsort2.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort3.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort4.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort5.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort6.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort7.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort8.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort9.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort10.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort11.png?raw=true "counting sort ex")
+![Counting Sort](./images/countingsort12.png?raw=true "counting sort ex")
 
 ```python
 def counting_sort(array, maxval):
@@ -1508,14 +1506,14 @@ components of a hashmap
 	Hash function
 	collision handling
 
-![Hash Table](/../master/images/hashtable1.png?raw=true "hash table ex")
+![Hash Table](./images/hashtable1.png?raw=true "hash table ex")
 
 hash function = maps keys to array indices. For example, in this slide we see that the hash function has mapped the key 'banana' to index 1.
 But what's going on under the hood?
 The hash function takes a key as input and computes an array index from the intrinsic properties of that key.
 You’d initially use the hash function to determine where in the hash table to store a given key. Later, you’d use the same hash function to determine where in the hash table to search for a given key. For this reason, it’s crucial that a hash function behaves consistently and outputs the same index for identical inputs.
 
-![Hash Table](/../master/images/hashtable2.png?raw=true "hash table ex")
+![Hash Table](./images/hashtable2.png?raw=true "hash table ex")
 
 Keep in mind that hash tables can be used to store data of all types, but for now, let’s consider a very simple hash function for strings.
 
@@ -1523,7 +1521,7 @@ This hash function uses the first letter of a string to determine a hash table i
 
 Note that this hash function returns hash % SIZE, where SIZE is the size of the hash table. Modding by the size of the hash table is a good way to avoid indexing into a hash table slot that does not exist.
 
-![Hash Table](/../master/images/hashtable3.png?raw=true "hash table ex")
+![Hash Table](./images/hashtable3.png?raw=true "hash table ex")
 
 Time to throw a wrench into things. What if we want to store the word berry into the table as well?
 
@@ -1531,7 +1529,7 @@ Berry hashes to index 1, just as banana did. This is an example of a collision, 
 
 Even if your hash table is larger than your dataset and you’ve chosen a good hash function, you need a plan for dealing with collisions if and when they arise. Two common methods of dealing with collisions are linear probing and separate chaining.
 
-![Hash Table](/../master/images/hashtable4.png?raw=true "hash table ex")
+![Hash Table](./images/hashtable4.png?raw=true "hash table ex")
 
 With linear probing, if a key hashes to the same index as a previously stored key, it is assigned the next available slot in the table.
 
@@ -1541,7 +1539,7 @@ As you can surmise even from this simple example, once a collision occurs, you�
 
 Worst case insertion, deletion, and lookup times have devolved to O(n), as the next available slot could potentially have been the last slot in the table.
 
-![Hash Table](/../master/images/hashtable5.png?raw=true "hash table ex")
+![Hash Table](./images/hashtable5.png?raw=true "hash table ex")
 
 In the separate chaining model, the hash table is actually an array of pointers to linked lists.
 
@@ -1553,7 +1551,7 @@ Since m is a constant, O(n/m) is theoretically equivalent to O(n). In the real w
 
 A good hash function will maximize this real world improvement.
 
-![Hash Table](/../master/images/hashtable6.png?raw=true "hash table ex")
+![Hash Table](./images/hashtable6.png?raw=true "hash table ex")
 
 https://www.youtube.com/watch?v=shs0KM3wKv8
 	
@@ -1683,7 +1681,7 @@ def postorder(tree):
 
 binary trees = each node can have at most 2 children
 https://www.youtube.com/watch?v=H5JubkIy_p8
-![Binary Tree](/../master/images/binarytree.png?raw=true "binary tree")
+![Binary Tree](./images/binarytree.png?raw=true "binary tree")
 	strict/Proper Binary tree --> each node can have either 2 or 0 children
 	complete binary tree --> all levels except possibly the last are completely filled and all nodes are as left as possible
 
@@ -1691,9 +1689,9 @@ n-ary trees = trees to allow each parent to store references to any number of ch
 Here is an example of an N-ary tree representing a directory tree (with folder names in pink and file names in white)
 
 trie-trees =  trees often used to store characters(great for word validation problems)
-![Trie-trees](/../master/images/trie-trees1.png?raw=true "trie-trees ex")
-![Trie-trees](/../master/images/trie-trees2.png?raw=true "trie-trees ex")
-![Trie-trees](/../master/images/trie-trees3.png?raw=true "trie-trees ex")
+![Trie-trees](./images/trie-trees1.png?raw=true "trie-trees ex")
+![Trie-trees](./images/trie-trees2.png?raw=true "trie-trees ex")
+![Trie-trees](./images/trie-trees3.png?raw=true "trie-trees ex")
 
 
 * Be familiar with at least one type of balanced binary tree, whether it's a red/black tree, a splay tree or an AVL tree, and know how it's implemented
@@ -1706,30 +1704,30 @@ the root and leaves(nil) are black
 if a node us red, then its children are black
 all paths from a note to its NIL descendants contain the smae number of black nodes
 
-![red-black tree](/../master/images/redblacktree1.png?raw=true "red black tree ex")
+![red-black tree](./images/redblacktree1.png?raw=true "red black tree ex")
 
 3 main operations are= 	search, time complexity = O(log n)  
 			insert(require rotation), time complexity = O(log n)
 			remove(require rotation) time complexity = O(log n)
 space complexity = O(n)
 
-![red-black ex](/../master/images/redblackex1.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex2.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex3.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex4.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex5.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex6.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex7.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex8.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex9.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex10.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex11.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex12.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex13.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex14.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex15.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex16.png?raw=true "red black ex")
-![red-black ex](/../master/images/redblackex17.png?raw=true "red black ex")
+![red-black ex](./images/redblackex1.png?raw=true "red black ex")
+![red-black ex](./images/redblackex2.png?raw=true "red black ex")
+![red-black ex](./images/redblackex3.png?raw=true "red black ex")
+![red-black ex](./images/redblackex4.png?raw=true "red black ex")
+![red-black ex](./images/redblackex5.png?raw=true "red black ex")
+![red-black ex](./images/redblackex6.png?raw=true "red black ex")
+![red-black ex](./images/redblackex7.png?raw=true "red black ex")
+![red-black ex](./images/redblackex8.png?raw=true "red black ex")
+![red-black ex](./images/redblackex9.png?raw=true "red black ex")
+![red-black ex](./images/redblackex10.png?raw=true "red black ex")
+![red-black ex](./images/redblackex11.png?raw=true "red black ex")
+![red-black ex](./images/redblackex12.png?raw=true "red black ex")
+![red-black ex](./images/redblackex13.png?raw=true "red black ex")
+![red-black ex](./images/redblackex14.png?raw=true "red black ex")
+![red-black ex](./images/redblackex15.png?raw=true "red black ex")
+![red-black ex](./images/redblackex16.png?raw=true "red black ex")
+![red-black ex](./images/redblackex17.png?raw=true "red black ex")
 
 ```python
 class RedBlackTree(object):
@@ -1956,73 +1954,73 @@ splay tree example
 https://www.youtube.com/watch?v=nKZWL9hbcI4
 
 insert 10
-![splay tree ex](/../master/images/splaytree1.png?raw=true "splay tree ex")
+![splay tree ex](./images/splaytree1.png?raw=true "splay tree ex")
 
 insert 20
-![splay tree ex](/../master/images/splaytree2.png?raw=true "splay tree ex")
+![splay tree ex](./images/splaytree2.png?raw=true "splay tree ex")
 
 zig left
-![splay tree ex](/../master/images/splaytree3.png?raw=true "splay tree ex")
+![splay tree ex](./images/splaytree3.png?raw=true "splay tree ex")
 
 insert 30
-![splay tree ex](/../master/images/splaytree4.png?raw=true "splay tree ex")
+![splay tree ex](./images/splaytree4.png?raw=true "splay tree ex")
 
 zig left
-![splay tree ex](/../master/images/splaytree5.png?raw=true "splay tree ex")
+![splay tree ex](./images/splaytree5.png?raw=true "splay tree ex")
 
 insert 40
-![splay tree ex](/../master/images/splaytree6.png?raw=true "splay tree ex")
+![splay tree ex](./images/splaytree6.png?raw=true "splay tree ex")
 
  zig left
-![splay tree ex](/../master/images/splaytree7.png?raw=true "splay tree ex")
+![splay tree ex](./images/splaytree7.png?raw=true "splay tree ex")
  
  insert 25 
- ![splay tree ex](/../master/images/splaytree8.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree8.png?raw=true "splay tree ex")
  
  zig-zag right 
- ![splay tree ex](/../master/images/splaytree9.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree9.png?raw=true "splay tree ex")
 
  zig right 
-  ![splay tree ex](/../master/images/splaytree10.png?raw=true "splay tree ex")
+  ![splay tree ex](./images/splaytree10.png?raw=true "splay tree ex")
 
  insert 15 
- ![splay tree ex](/../master/images/splaytree11.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree11.png?raw=true "splay tree ex")
  
  zig-zag right 
- ![splay tree ex](/../master/images/splaytree12.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree12.png?raw=true "splay tree ex")
  
  zig right 
- ![splay tree ex](/../master/images/splaytree13.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree13.png?raw=true "splay tree ex")
  
  insert 120
- ![splay tree ex](/../master/images/splaytree14.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree14.png?raw=true "splay tree ex")
  
  zig-zag left
- ![splay tree ex](/../master/images/splaytree15.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree15.png?raw=true "splay tree ex")
  
  zig left 
- ![splay tree ex](/../master/images/splaytree16.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree16.png?raw=true "splay tree ex")
  
  find 25 
- ![splay tree ex](/../master/images/splaytree17.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree17.png?raw=true "splay tree ex")
 
  zig-zag left
- ![splay tree ex](/../master/images/splaytree18.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree18.png?raw=true "splay tree ex")
  
  zig right 
- ![splay tree ex](/../master/images/splaytree19.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree19.png?raw=true "splay tree ex")
  
  delete 15 
- ![splay tree ex](/../master/images/splaytree20.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree20.png?raw=true "splay tree ex")
  
  zig right
- ![splay tree ex](/../master/images/splaytree21.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree21.png?raw=true "splay tree ex")
  
  remove root 
- ![splay tree ex](/../master/images/splaytree22.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree22.png?raw=true "splay tree ex")
  
  largest element in left tree to root
- ![splay tree ex](/../master/images/splaytree23.png?raw=true "splay tree ex")
+ ![splay tree ex](./images/splaytree23.png?raw=true "splay tree ex")
  
 ```python 
 # splay tree
@@ -2158,35 +2156,35 @@ The first two rotations are single rotations and the next two rotations are doub
 
 Left Rotation
 If a tree becomes unbalanced, when a node is inserted into the right subtree of the right subtree, then we perform a single left rotation −
-![AVL left rotate](/../master/images/avlleftrotation.png?raw=true "AVL left rotation")
+![AVL left rotate](./images/avlleftrotation.png?raw=true "AVL left rotation")
 
 Right Rotation
 AVL tree may become unbalanced, if a node is inserted in the left subtree of the left subtree. The tree then needs a right rotation.
-![AVL right rotate](/../master/images/avlrightrotation.png?raw=true "AVL right rotation")
+![AVL right rotate](./images/avlrightrotation.png?raw=true "AVL right rotation")
 
 Left-Right Rotation
 Double rotations are slightly complex version of already explained versions of rotations. To understand them better, we should take note of each action performed while rotation. Let's first check how to perform Left-Right rotation. A left-right rotation is a combination of left rotation followed by right rotation.
-![AVL left-right rotate](/../master/images/avlleftrightrotation.png?raw=true "AVL left-right rotation")
+![AVL left-right rotate](./images/avlleftrightrotation.png?raw=true "AVL left-right rotation")
 
 Right-Left Rotation
 The second type of double rotation is Right-Left Rotation. It is a combination of right rotation followed by left rotation.
-![AVL right-left rotate](/../master/images/avltrightleftrotation.png?raw=true "AVL right-left rotation")
+![AVL right-left rotate](./images/avltrightleftrotation.png?raw=true "AVL right-left rotation")
 
 example of AVL insert the following: 3-4-8-6-7-5-2-1
-![AVL tree ex](/../master/images/avlex1.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex2.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex3.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex4.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex5.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex6.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex7.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex8.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex9.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex10.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex11.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex12.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex13.png?raw=true "AVL tree ex")
-![AVL tree ex](/../master/images/avlex14.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex1.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex2.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex3.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex4.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex5.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex6.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex7.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex8.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex9.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex10.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex11.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex12.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex13.png?raw=true "AVL tree ex")
+![AVL tree ex](./images/avlex14.png?raw=true "AVL tree ex")
 
 AVL deletion = https://www.youtube.com/watch?v=7w9Ge_IjSOw
 
@@ -2453,7 +2451,7 @@ if __name__ == "__main__":
 * Understand tree traversal algorithms: BFS and DFS, and know the difference between inorder, postorder and preorder.
 Breadth First Traversal(level order) = referes to traversing the tree nodes in a level by level fashion
 
-![Breadth First Traversal](/../master/images/breadthfirsttraversal.png?raw=true "Breadth First Traversal ex")
+![Breadth First Traversal](./images/breadthfirsttraversal.png?raw=true "Breadth First Traversal ex")
 use BFS when you need to find the shortest path in a unweighted graph
 
 https://www.youtube.com/watch?v=-uR7BSfNJko
@@ -2535,13 +2533,13 @@ g.print_graph()
 Depth first Traversal = is an algorithm for traversing or searching tree or graph data structures. One starts at the root (selecting some arbitrary node as the root in the case of a graph) and explores as far as possible along each branch before backtracking.
 
 Preorder traversal - Root, left, Right
-![Preorder Traversal](/../master/images/preordertraversal.png?raw=true "Preorder Traversal ex")
+![Preorder Traversal](./images/preordertraversal.png?raw=true "Preorder Traversal ex")
 	
 Inorder traversal - Left, Root, Right
-![Inorder Traversal](/../master/images/inordertraversal.png?raw=true "Inorder Traversal ex")
+![Inorder Traversal](./images/inordertraversal.png?raw=true "Inorder Traversal ex")
 	
 Postorder Traversal - left, right, root
-![Postorder Traversal](/../master/images/postordertraversal.png?raw=true "Postorder Traversal ex")
+![Postorder Traversal](./images/postordertraversal.png?raw=true "Postorder Traversal ex")
 
 ```python
 # depth First Search
@@ -2846,25 +2844,25 @@ ex.  [9, 3, 7, 1, 8, 12, 10, 20, 15, 18, 5]
 
 The first thing we need to do is find the pivot. As mentioned above, it’s always the smallest number. In this case, 1 is the pivot, so it becomes the root node, since all other elements will become leaves, and this is the first node.
 
-![Cartesian Tree](/../master/images/cartesiantree1.png?raw=true "Cartesian tree ex")
+![Cartesian Tree](./images/cartesiantree1.png?raw=true "Cartesian tree ex")
 
 Now, for each new side, we need to do the same thing. So, on the left hand, 3 is the smallest, and on the right, 5 is the smallest.
 
-![Cartesian Tree](/../master/images/cartesiantree2.png?raw=true "Cartesian tree ex")
+![Cartesian Tree](./images/cartesiantree2.png?raw=true "Cartesian tree ex")
 
 Visually, this is a bit odd because of spacing, but we can see all the numbers on the right branch (5) are to the left of 5 – it will look better once we finish it.
 
 Next up is left, where there is nothing to be done, since each child of 3 is a leaf, and right, where 8 is smallest.
 
-![Cartesian Tree](/../master/images/cartesiantree3.png?raw=true "Cartesian tree ex")
+![Cartesian Tree](./images/cartesiantree3.png?raw=true "Cartesian tree ex")
 
 And again, 10 is now the smallest.
 
-![Cartesian Tree](/../master/images/cartesiantree4.png?raw=true "Cartesian tree ex")
+![Cartesian Tree](./images/cartesiantree4.png?raw=true "Cartesian tree ex")
 
 And now, almost done, the right side is left; 15 is the smallest here.
 
-![Cartesian Tree](/../master/images/cartesiantree4.png?raw=true "Cartesian tree ex")
+![Cartesian Tree](./images/cartesiantree4.png?raw=true "Cartesian tree ex")
 
 sorting of a cartesian tree
 algo = 
@@ -2876,7 +2874,7 @@ While the priority queue is non-empty:
 	Add the Cartesian tree children of x to the priority queue
 
 ex. 
-![Cartesian Tree Sorting](/../master/images/cartesianSorting.JPG?raw=true "Cartesian tree sorting ex")
+![Cartesian Tree Sorting](./images/cartesianSorting.JPG?raw=true "Cartesian tree sorting ex")
 
 ```C++
 // A C++ program to implement Cartesian Tree sort
@@ -3084,91 +3082,91 @@ https://www.youtube.com/watch?v=coRJrcIYbF4
 ex= [2, 4, 5, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30 , 32, 34, 36, 7, 9, 11, , 13]
 
 add 2
-![B Tree ex](/../master/images/btree1.png?raw=true "B tree ex")
+![B Tree ex](./images/btree1.png?raw=true "B tree ex")
 
 add 4
-![B Tree ex](/../master/images/btree2.png?raw=true "B tree ex")
+![B Tree ex](./images/btree2.png?raw=true "B tree ex")
 
 add 5 
-![B Tree ex](/../master/images/btree3.png?raw=true "B tree ex")
+![B Tree ex](./images/btree3.png?raw=true "B tree ex")
 
 add 6 
-![B Tree ex](/../master/images/btree4.png?raw=true "B tree ex")
+![B Tree ex](./images/btree4.png?raw=true "B tree ex")
 
 add 8 
-![B Tree ex](/../master/images/btree5.png?raw=true "B tree ex")
+![B Tree ex](./images/btree5.png?raw=true "B tree ex")
 
 add 10 
-![B Tree ex](/../master/images/btree6.png?raw=true "B tree ex")
+![B Tree ex](./images/btree6.png?raw=true "B tree ex")
 
 add 12 
-![B Tree ex](/../master/images/btree7.png?raw=true "B tree ex")
+![B Tree ex](./images/btree7.png?raw=true "B tree ex")
 
 add 14 
-![B Tree ex](/../master/images/btree8.png?raw=true "B tree ex")
+![B Tree ex](./images/btree8.png?raw=true "B tree ex")
 
 add 16
-![B Tree ex](/../master/images/btree9.png?raw=true "B tree ex")
+![B Tree ex](./images/btree9.png?raw=true "B tree ex")
 
 add 18
-![B Tree ex](/../master/images/btree10.png?raw=true "B tree ex")
+![B Tree ex](./images/btree10.png?raw=true "B tree ex")
 
 add 20
-![B Tree ex](/../master/images/btree11.png?raw=true "B tree ex")
+![B Tree ex](./images/btree11.png?raw=true "B tree ex")
 
 add 22 
-![B Tree ex](/../master/images/btree12.png?raw=true "B tree ex")
+![B Tree ex](./images/btree12.png?raw=true "B tree ex")
 
 add 24
-![B Tree ex](/../master/images/btree13.png?raw=true "B tree ex")
+![B Tree ex](./images/btree13.png?raw=true "B tree ex")
 
 add 26 
-![B Tree ex](/../master/images/btree14.png?raw=true "B tree ex")
+![B Tree ex](./images/btree14.png?raw=true "B tree ex")
 
 add 28 
-![B Tree ex](/../master/images/btree15.png?raw=true "B tree ex")
+![B Tree ex](./images/btree15.png?raw=true "B tree ex")
 
 add 30 
-![B Tree ex](/../master/images/btree16.png?raw=true "B tree ex")
+![B Tree ex](./images/btree16.png?raw=true "B tree ex")
 
 add 32
-![B Tree ex](/../master/images/btree17.png?raw=true "B tree ex")
+![B Tree ex](./images/btree17.png?raw=true "B tree ex")
 
 add 34
-![B Tree ex](/../master/images/btree18.png?raw=true "B tree ex")
+![B Tree ex](./images/btree18.png?raw=true "B tree ex")
 
 add 36 
-![B Tree ex](/../master/images/btree19.png?raw=true "B tree ex")
+![B Tree ex](./images/btree19.png?raw=true "B tree ex")
 
 add 7 
-![B Tree ex](/../master/images/btree20.png?raw=true "B tree ex")
+![B Tree ex](./images/btree20.png?raw=true "B tree ex")
 
 add 9 
-![B Tree ex](/../master/images/btree21.png?raw=true "B tree ex")
+![B Tree ex](./images/btree21.png?raw=true "B tree ex")
 
 add 11 
-![B Tree ex](/../master/images/btree22.png?raw=true "B tree ex")
+![B Tree ex](./images/btree22.png?raw=true "B tree ex")
 
 add 13 
-![B Tree ex](/../master/images/btree23.png?raw=true "B tree ex")
+![B Tree ex](./images/btree23.png?raw=true "B tree ex")
 
 delete 14 
-![B Tree ex](/../master/images/btree24.png?raw=true "B tree ex")
+![B Tree ex](./images/btree24.png?raw=true "B tree ex")
 
 delete 10
-![B Tree ex](/../master/images/btree25.png?raw=true "B tree ex")
+![B Tree ex](./images/btree25.png?raw=true "B tree ex")
 
 delete 18 
-![B Tree ex](/../master/images/btree26.png?raw=true "B tree ex")
+![B Tree ex](./images/btree26.png?raw=true "B tree ex")
 
 delete 16
-![B Tree ex](/../master/images/btree27.png?raw=true "B tree ex")
+![B Tree ex](./images/btree27.png?raw=true "B tree ex")
 
 delete 24
-![B Tree ex](/../master/images/btree28.png?raw=true "B tree ex")
+![B Tree ex](./images/btree28.png?raw=true "B tree ex")
 
 delete 6
-![B Tree ex](/../master/images/btree29.png?raw=true "B tree ex")
+![B Tree ex](./images/btree29.png?raw=true "B tree ex")
 
 ```python
 import bisect
@@ -3534,13 +3532,13 @@ https://www.youtube.com/watch?v=TLxWtXEbtFE
 
 example:
 
-![KD Tree ex](/../master/images/kdtree1.png?raw=true "KD tree ex")
-![KD Tree ex](/../master/images/kdtree2.png?raw=true "KD tree ex")
-![KD Tree ex](/../master/images/kdtree3.png?raw=true "KD tree ex")
-![KD Tree ex](/../master/images/kdtree4.png?raw=true "KD tree ex")
-![KD Tree ex](/../master/images/kdtree5.png?raw=true "KD tree ex")
-![KD Tree ex](/../master/images/kdtree6.png?raw=true "KD tree ex")
-![KD Tree ex](/../master/images/kdtree7.png?raw=true "KD tree ex")
+![KD Tree ex](./images/kdtree1.png?raw=true "KD tree ex")
+![KD Tree ex](./images/kdtree2.png?raw=true "KD tree ex")
+![KD Tree ex](./images/kdtree3.png?raw=true "KD tree ex")
+![KD Tree ex](./images/kdtree4.png?raw=true "KD tree ex")
+![KD Tree ex](./images/kdtree5.png?raw=true "KD tree ex")
+![KD Tree ex](./images/kdtree6.png?raw=true "KD tree ex")
+![KD Tree ex](./images/kdtree7.png?raw=true "KD tree ex")
 
 
 ```python 
@@ -3592,7 +3590,7 @@ Output would be:
 
 look at three criteria. One is how much memory, or space, we need in each representation. We'll use asymptotic notation for that. Yes, we can use asymptotic notation for purposes other than expressing running times! It's really a way to characterize functions, and a function can describe a running time, an amount of space required, or some other resource. The other two criteria we'll use relate to time. One is how long it takes to determine whether a given edge is in the graph. The other is how long it takes to find the neighbors of a given vertex.
 
-![Social Networking](/../master/images/socialnetworkgraph.png?raw=true "Social Networking Graph")
+![Social Networking](./images/socialnetworkgraph.png?raw=true "Social Networking Graph")
 
 ### Edge List
 One simple way to represent a graph is just a list, or array, of |E| ∣E∣vertical bar, E, vertical bar edges, which we call an edge list. To represent an edge, we just have an array of two vertex numbers, or an array of objects containing the vertex numbers of the vertices that the edges are incident on. If edges have weights, add either a third element to the array or more information to the object, giving the edge's weight. Since each edge contains just two or three numbers, the total space for an edge list is \Theta(E) Θ(E). For example, here's how we represent an edge list in JavaScript for the social network graph:
@@ -3606,7 +3604,7 @@ Edge lists are simple, but if we want to find whether the graph contains a parti
 ### Adjacency matrices
 For a graph with |V| ∣V∣vertical bar, V, vertical bar vertices, an adjacency matrix is a |V| \times |V| ∣V∣×∣V∣vertical bar, V, vertical bar, times, vertical bar, V, vertical bar matrix of 0s and 1s, where the entry in row i ii and column j jj is 1 if and only if the edge (i,j) (i,j)left parenthesis, i, comma, j, right parenthesis is in the graph. If you want to indicate an edge weight, put it in the row i ii, column j jj entry, and reserve a special value (perhaps null) to indicate an absent edge. Here's the adjacency matrix for the social network graph:
 
-![Adjaceny Matrices](/../master/images/adjacencyMatrices.png?raw=true "Adjaceny Matrices")
+![Adjaceny Matrices](./images/adjacencyMatrices.png?raw=true "Adjaceny Matrices")
 
 ```javascript 
 [ [0, 1, 0, 0, 0, 0, 1, 0, 1, 0],
@@ -3628,7 +3626,7 @@ For an undirected graph, the adjacency matrix is symmetric: the row i ii, column
 ### Adjacency List
 Representing a graph with adjacency lists combines adjacency matrices with edge lists. For each vertex i ii, store an array of the vertices adjacent to it. We typically have an array of |V| ∣V∣vertical bar, V, vertical bar adjacency lists, one adjacency list per vertex. Here's an adjacency-list representation of the social network graph:
 
-![Adjaceny List](/../master/images/adjacencyList.png?raw=true "Adjaceny List")
+![Adjaceny List](./images/adjacencyList.png?raw=true "Adjaceny List")
 
 ```javascript
 [ [1, 6, 8],
@@ -3701,21 +3699,21 @@ BFS begins at the starting vertex s and colors start gray to show that it is cur
 
 
 the Graph
-![The Graph](/../master/images/theGraph.png?raw=true "The Graph")
+![The Graph](./images/theGraph.png?raw=true "The Graph")
 
  Starting from fool we take all nodes that are adjacent to fool and add them to the tree. The adjacent nodes include pool, foil, foul, and cool. Each of these nodes are added to the queue of new nodes to expand.
  
- ![BFS](/../master/images/bfs1.png?raw=true "BFS")
+ ![BFS](./images/bfs1.png?raw=true "BFS")
  
  In the next step bfs removes the next node (pool) from the front of the queue and repeats the process for all of its adjacent nodes. However, when bfs examines the node cool, it finds that the color of cool has already been changed to gray. This indicates that there is a shorter path to cool and that cool is already on the queue for further expansion. The only new node added to the queue while examining pool is poll. 
  
- ![BFS](/../master/images/bfs2.png?raw=true "BFS")
+ ![BFS](./images/bfs2.png?raw=true "BFS")
  
 The next vertex on the queue is foil. The only new node that foil can add to the tree is fail. As bfs continues to process the queue, neither of the next two nodes add anything new to the queue or the tree.
 
-![BFS](/../master/images/bfs3.png?raw=true "BFS")
+![BFS](./images/bfs3.png?raw=true "BFS")
 
-![BFS](/../master/images/bfs4.png?raw=true "BFS")
+![BFS](./images/bfs4.png?raw=true "BFS")
 
 ### depth-first search
 
@@ -3767,13 +3765,13 @@ Since vertex C was the end of one branch we now return to vertex B and continue 
 
 Vertex F has only one adjacent vertex, C, but since C is colored black there is nothing else to explore, and the algorithm has reached the end of another branch. From here on, you will see in Figure 21 through Figure 25  that the algorithm works its way back to the first node, setting finish times and coloring vertices black.
 
-![DFS](/../master/images/DFS1.png?raw=true "DFS")
-![DFS](/../master/images/DFS2.png?raw=true "DFS")
-![DFS](/../master/images/DFS3.png?raw=true "DFS")
+![DFS](./images/DFS1.png?raw=true "DFS")
+![DFS](./images/DFS2.png?raw=true "DFS")
+![DFS](./images/DFS3.png?raw=true "DFS")
 
 The starting and finishing times for each node display a property called the parenthesis property. This property means that all the children of a particular node in the depth first tree have a later discovery time and an earlier finish time than their parent
 
-![DFS](/../master/images/DFS4.png?raw=true "DFS")
+![DFS](./images/DFS4.png?raw=true "DFS")
 
 * Know their computational complexity, their tradeoffs, and how to implement them in real code
 BFS = 
@@ -3808,17 +3806,17 @@ Class			Search algorithm
 Data structure		Graph
 Worst-case performance	O(|E|+|V|\log |V|)
 
-![Dijkstra](/../master/images/dijkstra1.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra2.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra3.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra4.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra5.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra6.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra7.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra8.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra9.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra10.png?raw=true "Dijkstra ex")
-![Dijkstra](/../master/images/dijkstra11.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra1.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra2.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra3.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra4.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra5.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra6.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra7.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra8.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra9.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra10.png?raw=true "Dijkstra ex")
+![Dijkstra](./images/dijkstra11.png?raw=true "Dijkstra ex")
 
 ```python
 class Graph:

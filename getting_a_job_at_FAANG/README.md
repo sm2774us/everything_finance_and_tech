@@ -5,12 +5,9 @@
 # Competitive Programming
 
 The repository contains solutions to various coding Competitive Programming sites like [Leetcode](https://leetcode.com/neerazz90/), [Hackerrank](https://www.hackerrank.com/b_neerajkumarsi1)
-, [Hackearth](https://www.hackerearth.com/@neerajkumarsingh), [Pramp](https://www.pramp.com/dashboard#/), AlgoExpert
-& [EPI](https://github.com/neerazz/FAANG/blob/master/Resources/Elements%20of%20Programming%20Interviews%20in%20Java.pdf)
-. I've tried to provide the detailed solution and the intuition through comments.
+, [Hackearth](https://www.hackerearth.com/@neerajkumarsingh), [Pramp](https://www.pramp.com/dashboard#/), AlgoExpert. I've tried to provide the detailed solution and the intuition through comments.
 
-These questions are classical problems that are most frequently asked by the tech giants in technical interviews and are
-not related to hard core competitive coding.
+These questions are classical problems that are most frequently asked by the tech giants in technical interviews and are not related to hard core competitive coding.
 `All the code provided inside the repository is purely original.`
 
 ## [Complexities](https://www.bigocheatsheet.com/)
